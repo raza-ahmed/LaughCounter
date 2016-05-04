@@ -110,8 +110,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     public void submitOrder(View view){
         display(1);
     }
