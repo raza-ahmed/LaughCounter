@@ -7,53 +7,101 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public int x = 0;
+    public int valueOfEmotion = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-      /*  final Button button = (Button) findViewById(R.id.dec);
-        button.setOnClickListener(new View.OnClickListener() {
 
-
-            public void onClick(View v) {
-               if (x > 0){
-                   x = x--;
-               }
-            String newXvalue = Integer.toString(x);
-
-                TextView err = (TextView)findViewById(R.id.quantity_text_view);
-                err.setText("Hello");
-            }
-        });
-
-
-        final Button button2 = (Button) findViewById(R.id.inc);
-        button2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (x <= 0){
-                    x = x++;
-                }
-                String newXvalue2 = Integer.toString(x);
-
-                TextView err = (TextView)findViewById(R.id.quantity_text_view);
-                err.setText("Hello");
-            }
-        });
-
-        */
     }
-
+    //happy, very happy, extremely happy
     public void increment(View view){
-        String gFeeling = "Good";
-        displayEmotion(gFeeling);
+        valueOfEmotion = valueOfEmotion + 1;
+        if (valueOfEmotion == 0){
+            String gFeeling = "Sad";
+            displayEmotion(gFeeling);
+        }
+        else if (valueOfEmotion == 1){
+            String gFeeling = "Very Sad";
+            displayEmotion(gFeeling);
+        }
+        else if (valueOfEmotion == 2){
+            String gFeeling = "Extremely Sad";
+            displayEmotion(gFeeling);
+        }
+
+        else if (valueOfEmotion == 3){
+            String gFeeling = "Normal";
+            displayEmotion(gFeeling);
+        }
+
+        else if (valueOfEmotion == 4){
+            String gFeeling = "Happy";
+            displayEmotion(gFeeling);
+        }
+
+        else if (valueOfEmotion == 5){
+            String gFeeling = "Very Happy";
+            displayEmotion(gFeeling);
+        }
+
+        else if (valueOfEmotion == 6){
+            String gFeeling = "Extremely Happy";
+            displayEmotion(gFeeling);
+        }
+        else {
+            valueOfEmotion = 4;
+            String gFeeling = "Normal";
+            displayEmotion(gFeeling);
+        }
+
     }
 
+
+    //sad, very sad, extremely sad
     public void decrement(View view){
-        String bFeeling = "Bad";
-        displayEmotion(bFeeling);
+        valueOfEmotion = valueOfEmotion - 1;
+        if (valueOfEmotion == 0){
+            String bFeeling = "Extremely Sad";
+            displayEmotion(bFeeling);
+        }
+        else if (valueOfEmotion == 1){
+            String bFeeling = "Very Sad";
+            displayEmotion(bFeeling);
+        }
+        else if (valueOfEmotion == 2){
+            String bFeeling = "Sad";
+            displayEmotion(bFeeling);
+        }
+
+        else if (valueOfEmotion == 3){
+            String bFeeling = "Normal";
+            displayEmotion(bFeeling);
+        }
+
+        else if (valueOfEmotion == 4){
+            String gFeeling = "Happy";
+            displayEmotion(gFeeling);
+        }
+
+        else if (valueOfEmotion == 5){
+            String bFeeling = "Very Happy";
+            displayEmotion(bFeeling);
+        }
+
+        else if (valueOfEmotion == 6){
+            String bFeeling = "Extremely Happy";
+            displayEmotion(bFeeling);
+        }
+        else {
+            valueOfEmotion = 4;
+            String bFeeling = "Normal";
+            displayEmotion(bFeeling);
+        }
+
+
     }
 
     private void displayEmotion(String abc){
