@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
                if (x > 0){
                    x = x--;
                }
+            String newXvalue = Integer.toString(x);
+
+                TextView err = (TextView)findViewById(R.id.quantity_text_view);
+                err.setText("Hello");
             }
         });
 
@@ -33,14 +37,15 @@ public class MainActivity extends AppCompatActivity {
                 if (x <= 0){
                     x = x++;
                 }
+                String newXvalue2 = Integer.toString(x);
+
+                TextView err = (TextView)findViewById(R.id.quantity_text_view);
+                err.setText("Hello");
             }
         });
     }
 
-    String newXvalue = Integer.toString(x);
 
-    TextView err = (TextView)findViewById(R.id.quantity_text_view);
-    err.setText("Hello");
 
 
 }
