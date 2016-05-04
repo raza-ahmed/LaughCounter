@@ -3,7 +3,6 @@ package com.android.ahmedraza.laughcounter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button button = (Button) findViewById(R.id.dec);
+      /*  final Button button = (Button) findViewById(R.id.dec);
         button.setOnClickListener(new View.OnClickListener() {
 
 
@@ -43,9 +42,34 @@ public class MainActivity extends AppCompatActivity {
                 err.setText("Hello");
             }
         });
+
+        */
+    }
+
+    public void increment(View view){
+        String gFeeling = "Good";
+        displayEmotion(gFeeling);
+    }
+
+    public void decrement(View view){
+        String bFeeling = "Bad";
+        displayEmotion(bFeeling);
+    }
+
+    private void displayEmotion(String abc){
+        TextView goodText = (TextView) findViewById(R.id.quantity_text_view);
+        goodText.setText(abc);
     }
 
 
 
+
+    public void submitOrder(View view){
+        display(1);
+    }
+    private void display(int number){
+        TextView quantityTextView = (TextView) findViewById(R.id.price_text_view);
+        quantityTextView.setText("" + number);
+    }
 
 }
