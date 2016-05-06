@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     public void increment(View view){
         valueOfEmotion = valueOfEmotion + 1;
         if (valueOfEmotion == 0){
-            String gFeeling = "Sad";
+            String gFeeling = "Extremely Sad";
             displayEmotion(gFeeling);
         }
         else if (valueOfEmotion == 1){
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             displayEmotion(gFeeling);
         }
         else if (valueOfEmotion == 2){
-            String gFeeling = "Extremely Sad";
+            String gFeeling = "Sad";
             displayEmotion(gFeeling);
         }
 
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             displayEmotion(gFeeling);
         }
         else {
-            valueOfEmotion = 4;
+            valueOfEmotion = 3;
             String gFeeling = "Normal";
             displayEmotion(gFeeling);
         }
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             displayEmotion(bFeeling);
         }
         else {
-            valueOfEmotion = 4;
+            valueOfEmotion = 3;
             String bFeeling = "Normal";
             displayEmotion(bFeeling);
         }

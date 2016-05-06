@@ -87,6 +87,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:onClick="submitOrder"
-        android:text="Order" />
+        android:text="Submit" />
 
 </LinearLayout>
