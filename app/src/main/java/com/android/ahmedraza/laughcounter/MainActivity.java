@@ -2,17 +2,35 @@ package com.android.ahmedraza.laughcounter;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import com.android.ahmedraza.laughcounter.data.NoteItem;
+import com.android.ahmedraza.laughcounter.data.NotesDataSource;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     public int valueOfEmotion = 3;
+    private NotesDataSource dataSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        dataSource = new NotesDataSource(this);
+        List<NoteItem> notes = dataSource.findAll();
+        NoteItem note = notes.get(0);
+        note.setText("Updated!");
+        dataSource.update(note);
+
+        notes = dataSource.findAll();
+        note = notes.get(0);
+
+        Log.i("NOTES", note.getKey() + ": " + note.getText());
 
 
     }
