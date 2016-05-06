@@ -45,5 +45,8 @@ public class NoteItem {
 
     }
 
-
+    @Override
+    public String toString() {
+        return this.getText();
+    }
 }
